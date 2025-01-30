@@ -16,6 +16,9 @@ app.use(express.json());
 //routes..
 
 app.use("/api/todos", todoRoutes);
+app.get('/', (req, res) => {
+  res.send('Welcome to the Todo App API!'); // Or a JSON response: res.json({ message: "API is running" });
+});
 
 // connecting mongoDB...
 
